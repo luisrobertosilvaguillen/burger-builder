@@ -12,6 +12,7 @@
 /build
 
 /src/const.js
+/src/axios-orders.js
 
 # misc
 .DS_Store
