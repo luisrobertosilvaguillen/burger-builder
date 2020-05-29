@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Demo Project based in the Udemy Course: [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
-## Available Scripts
+[Live Demo Here](https://react-mi-hamburguesa.web.app)
 
-In the project directory, you can run:
+## Intructions to run this Project
 
-### `yarn start`
+In order to configure and run this proyect you must follow the next steps
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `install packages`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You must download/clone this repo and run `npm install` 
 
-### `yarn test`
+### `configure firebase`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project use firebase to store data.
+Go to [Firebase](https://firebase.google.com/?hl=es) to create a New Project with a Realtime Database.
 
-### `yarn build`
+Configure the Database Rules with:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    {
+        "rules": {
+            "ingredients": {
+            ".read": "true",
+                ".write": "true",
+            },
+            "orders": {
+            ".read": "auth != null",
+            ".write": "auth != null",
+            ".indexOn": ["userId"]
+            }
+        }
+    }
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Import this Json wich are the Ingredients for the Burger
 
-### `yarn eject`
+    {
+        "-M7-YnO2YbMNfI6xvdbB" : {
+            "id" : 1,
+            "name" : "Bacon",
+            "price" : 0.7,
+            "quantity" : 0,
+            "type" : "bacon"
+        },
+        "-M7-YrfXs_qYNNJbDsKs" : {
+            "id" : 1,
+            "name" : "Cheese",
+            "price" : 0.4,
+            "quantity" : 0,
+            "type" : "cheese"
+        },
+        "-M7-Yv736cGzI6SNI8El" : {
+            "id" : 1,
+            "name" : "Meat",
+            "price" : 1.3,
+            "quantity" : 0,
+            "type" : "meat"
+        },
+        "-M7-Yyao8o5qYgS7mbmz" : {
+            "id" : 1,
+            "name" : "Salad",
+            "price" : 0.5,
+            "quantity" : 0,
+            "type" : "salad"
+        }
+    }
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once you have configured your project, you should copy the API ENDPOINT and the API KEY and paste in the follwing files:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    Paste the API ENDPOINT in ./src/axios-orders.js
+    Paste the API KEY in ./src/const.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you want to ask something about this project, you can send me a email at luis.roberto.silva.guillen@gmail.com
