@@ -32,7 +32,7 @@ Configure the Database Rules with:
     }
 
 
-Import this Json wich are the Ingredients for the Burger
+Import this Json which are the Ingredients for the Burger
 
     {
         "-M7-YnO2YbMNfI6xvdbB" : {
