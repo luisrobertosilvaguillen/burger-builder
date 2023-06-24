@@ -66,9 +66,9 @@ Import this Json which are the Ingredients for the Burger
     }
 
 
-Once you have configured your project, you should copy the API ENDPOINT and the API KEY and paste in the follwing files:
+Once you have configured your project, you should copy the API ENDPOINT and the API KEY and paste into the follwing files:
 
     Paste the API ENDPOINT in ./src/axios-orders.js
     Paste the API KEY in ./src/const.js
 
-If you want to ask something about this project, you can send me a email at luis.roberto.silva.guillen@gmail.com
+If you want to ask something about this project, you can send me an email at luis.roberto.silva.guillen@gmail.com
